@@ -1,1 +1,33 @@
 // Write your solution in this file!
+
+function updateDriverWithKeyAndValue(driver, key, value){
+    return Object.assign({}, driver, {[key] : value})
+}
+
+
+function destructivelyUpdateDriverWithKeyAndValue(driver, key, value){
+    return Object.assign(driver, {[key]: value})
+}
+
+function deleteFromDriverByKey(driver, key){
+    const newDriver = Object.assign({}, driver)
+    // debugger
+    delete newDriver[key]
+    return newDriver
+}
+
+function destructivelyDeleteFromDriverByKey(driver, key){
+    delete driver[key]
+    return driver
+}
+
+const driver = {
+    'name': "Sam"
+}
+
+// const newDriver = {
+    
+// }
+
+// console.log(updateDriverWithKeyAndValue(driver, 'age', 26))
+// console.log(driver)
